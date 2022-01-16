@@ -11,7 +11,7 @@ const forCast = (latitude, longitude, callback) => {
       callback("Unable to find location", undefined);
     } else {
       const { weather_descriptions, temperature, feelslike, humidity } = body.current;
-      const data = `${weather_descriptions[0]}, It is currently ${temperature} degrees. It feels like ${feelslike} degrees out. current humidity ${humidity}.`;
+      const data = `${weather_descriptions[0]}, It is currently ${temperature} degrees. It feels like ${feelslike} degrees out. current humidity ${humidity}%.`;
       callback(undefined, data);
     }
   });
