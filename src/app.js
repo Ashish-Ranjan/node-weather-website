@@ -1,6 +1,8 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
+const dotenv = require('dotenv');
+dotenv.config();
 const { geoCode } = require("./utils/geocode");
 const { forCast } = require("./utils/forcast");
 

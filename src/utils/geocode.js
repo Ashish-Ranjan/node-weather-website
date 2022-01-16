@@ -1,6 +1,5 @@
 const request = require("postman-request");
-const { GEO_ACCESS_KEY } = require("../config.json");
-
+const GEO_ACCESS_KEY = process.env.GEO_ACCESS_KEY;
 const geoCode = (address, callback) => {
   const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address

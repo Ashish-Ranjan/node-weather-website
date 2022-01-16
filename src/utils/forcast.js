@@ -1,5 +1,5 @@
 const request = require("postman-request");
-const { API_ACCESS_KEY } = require("../config.json");
+const API_ACCESS_KEY = process.env.API_ACCESS_KEY;
 
 const forCast = (latitude, longitude, callback) => {
   const url = `http://api.weatherstack.com/current?access_key=${API_ACCESS_KEY}&query=${encodeURIComponent(
